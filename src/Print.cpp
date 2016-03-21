@@ -254,10 +254,10 @@ static bool PrintToDevice(const PrintData &pd, ProgressUpdateUI *progressUI = nu
             // make sure not to print upside-down
             rotation = (rotation % 180) == 0 ? 0 : 270;
             // finally turn the page by (another) 90 deg in landscape mode
-            if (!bPrintPortrait) {
+            /*if (!bPrintPortrait) {
                 rotation = (rotation + 90) % 360;
                 std::swap(pSize.dx, pSize.dy);
-            }
+            }*/
 
             // dpiFactor means no physical zoom
             float zoom = dpiFactor;
