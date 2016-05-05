@@ -270,7 +270,7 @@ static bool PrintToDevice(const PrintData &pd, ProgressUpdateUI *progressUI = nu
             // that printing forms/labels of varying size remains reliably possible)
             PointI offset(-printable.x, -printable.y);
 
-            if (pd.advData.scale != PrintScaleNone) {
+            /*if (pd.advData.scale != PrintScaleNone) {
                 // make sure to fit all content into the printable area when scaling
                 // and the whole document page on the physical paper
                 RectD rect = engine.PageContentBox(pageNo, Target_Print);
@@ -299,7 +299,7 @@ static bool PrintToDevice(const PrintData &pd, ProgressUpdateUI *progressUI = nu
                     offset.y += (int)(printable.y - onPaper.y);
                 else if (onPaper.BR().y > printable.BR().y)
                     offset.y -= (int)(onPaper.BR().y - printable.BR().y);
-            }
+            }*/
 
             bool ok = false;
             short shrink = 1;
